@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Text Caser</title>
+
+<body>
+    <section>
+        <h1>Text Caser</h1>
+        <div class="button-container">
+                        <button onclick="editoroption1()" title="Uppercase Text">
+                Upper Case
+            </button>
+            <button onclick="editoroption2()" title="Lowercase Text">
+                Lower Case
+            </button>
+            <button onclick="editoroption3()" title="Capitalize Text">
+                Capitalize
+            </button>
+            <button onclick="editoroption4()" title="Clear Text">
+                Clear Text
+            </button>
+        </div>
+        <textarea id="textarea1" rows="15" placeholder="Paste your text here...">
+        </textarea>
+    </section>
+
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+.section {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: 5px;
+    border-color: black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: gray;
+}
+
+textarea {
+    width: 99%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+</style>
+
+<script>
+
+function editoroption1() {
+    document.getElementById("textarea1")
+        .style.textTransform = "uppercase";
+}
+
+function editoroption2() {
+    document.getElementById("textarea1")
+        .style.textTransform = "lowercase";
+}
+
+function editoroption3() {
+    document.getElementById("textarea1")
+        .style.textTransform = "capitalize";
+}
+
+function editoroption4() {
+    document.getElementById("textarea1")
+        .style.fontWeight = "normal";
+    document.getElementById("textarea1")
+        .style.textAlign = "left";
+    document.getElementById("textarea1")
+        .style.fontStyle = "normal";
+    document.getElementById("textarea1")
+        .style.textTransform = "capitalize";
+    document.getElementById("textarea1")
+        .value = "";
+}
+</script>
+
+</body>
+
+</html>
